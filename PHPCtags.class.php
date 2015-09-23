@@ -1,4 +1,26 @@
 <?php
+
+use PhpParser\Parser as PHPParser_Parser;
+use PhpParser\Lexer as PHPParser_Lexer;
+use PhpParser\Node\Stmt\Class_ as PHPParser_Node_Stmt_Class;
+use PhpParser\Node\Stmt\Property as PHPParser_Node_Stmt_Property;
+use PhpParser\Node\Stmt\ClassConst as PHPParser_Node_Stmt_ClassConst;
+use PhpParser\Node\Stmt\ClassMethod as PHPParser_Node_Stmt_ClassMethod;
+use PhpParser\Node\Stmt\If_ as PHPParser_Node_Stmt_If;
+use PhpParser\Node\Stmt\Const_ as PHPParser_Node_Stmt_Const;
+use PhpParser\Node\Stmt\Global_ as PHPParser_Node_Stmt_Global;
+use PhpParser\Node\Stmt\Static_ as PHPParser_Node_Stmt_Static;
+use PhpParser\Node\Stmt\Declare_ as PHPParser_Node_Stmt_Declare;
+use PhpParser\Node\Stmt\TryCatch as PHPParser_Node_Stmt_TryCatch;
+use PhpParser\Node\Stmt\Function_ as PHPParser_Node_Stmt_Function;
+use PhpParser\Node\Stmt\Interface_ as PHPParser_Node_Stmt_Interface;
+use PhpParser\Node\Stmt\Trait_ as PHPParser_Node_Stmt_Trait;
+use PhpParser\Node\Stmt\Namespace_ as PHPParser_Node_Stmt_Namespace;
+use PhpParser\Node\Expr\Assign as PHPParser_Node_Expr_Assign;
+use PhpParser\Node\Expr\AssignRef as PHPParser_Node_Expr_AssignRef;
+use PhpParser\Node\Expr\FuncCall as PHPParser_Node_Expr_FuncCall;
+
+
 class PHPCtags
 {
     const VERSION = '0.5.1';
